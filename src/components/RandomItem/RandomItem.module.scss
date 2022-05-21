@@ -1,11 +1,19 @@
 .item {
-  width: 1200px;
-  padding: 32px;
   background: #171717;
+  padding: 30px 20px;
   display: flex;
   justify-content: space-around;
   align-items: center;
   margin-bottom: 40px;
   position: relative;
-  min-height: 300px;
+  .randomText {
+    position: absolute;
+    font-size: 30px;
+    color: rgba(216, 220, 0, 0.1);
+    right: 5px;
+    bottom: 0;
+    font-weight: 900;
+    text-transform: uppercase;
+    user-select: none;
+  }
 }

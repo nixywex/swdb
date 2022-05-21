@@ -4,7 +4,6 @@ import { getAllFunctions } from "../../data";
 
 import RandomItem from "../RandomItem/RandomItem";
 import List from "../List/List";
-import Item from "../Item/Item";
 import Error from "../Error/Error";
 
 import styles from "./Content.module.scss";
@@ -15,25 +14,9 @@ const Content = ({ category }) => {
   const [errors, setErrors] = useState({
     randomError: false,
     listError: false,
-    itemError: false,
   });
-  const [currentItem, setCurrentItem] = useState(undefined);
-  const [currentItemID, setCurrentItemID] = useState(null);
 
   const functions = getAllFunctions(category);
-
-  const setItem = async () => {
-    if (currentItemID === null) return;
-
-    functions
-      .getSingle(currentItemID)
-      .then((res) => setCurrentItem(res))
-      .catch(() => {
-        setErrors((prev) => {
-          return { ...prev, itemError: true };
-        });
-      });
-  };
 
   useEffect(() => {
     functions
@@ -57,17 +40,12 @@ const Content = ({ category }) => {
       });
   }, []);
 
-  useEffect(() => {
-    setItem();
-  }, [currentItemID]);
-
   if (errors.randomError && errors.listError) {
     return <Error />;
   }
 
   return (
     <div className={styles.content}>
-      <RandomItem data={randomItem} error={errors.randomError} />
       <div className={styles.titleBlock}>
         <img
           className={styles.titleImg}
@@ -78,16 +56,11 @@ const Content = ({ category }) => {
         <h1 className={styles.title}>{category + "s"}</h1>
       </div>
       <div className={styles.mainContent}>
-        <List
-          error={errors.listError}
-          setCurrentItemID={setCurrentItemID}
-          currentItemID={currentItemID}
-          data={listData}
-        />
-        <Item
-          error={errors.itemError}
-          type={category.toLowerCase()}
-          data={currentItem}
+        <List error={errors.listError} data={listData} />
+        <RandomItem
+          data={randomItem}
+          error={errors.randomError}
+          type={category}
         />
       </div>
     </div>

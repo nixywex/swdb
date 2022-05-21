@@ -1,7 +1,13 @@
 @keyframes ldio-3bbec23i42 {
-  0% {transform: rotate(0deg)}
-  55% {transform: rotate(270deg)}
-  100% {transform: rotate(360deg)}
+  0% {
+    transform: rotate(0deg);
+  }
+  55% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 .ldio-3bbec23i42 div {
   position: absolute;
@@ -29,17 +35,19 @@
   backface-visibility: hidden;
   transform-origin: 0 0; /* see note above */
 }
-.ldio-3bbec23i42 div {box-sizing: content-box;}
+.ldio-3bbec23i42 div {
+  box-sizing: content-box;
+}
 
-.loader{
+.loader {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  .title{
+  .title {
     font-size: 25px;
     font-weight: 900;
-    color: #D8DC00;
+    color: #d8dc00;
     margin-bottom: 20px;
   }
 }

@@ -5,15 +5,14 @@ import Error from "../Error/Error";
 
 import styles from "./Item.module.scss";
 
-const Item = ({ data, type, error }) => {
+const Item = ({ data, error }) => {
   if (error) {
     return <Error />;
   }
+
   return (
     <div className={styles.item}>
-      {data === undefined ? (
-        <h3 className={styles.chooseText}>Choose a {type} from the list</h3>
-      ) : !data ? (
+      {!data ? (
         <Loader />
       ) : (
         <>

@@ -1,18 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import styles from "./ListItem.module.scss";
 
-const ListItem = ({ item, currentItemID, setCurrentItemID }) => {
+const ListItem = ({ item }) => {
   return (
-    <li
-      onClick={() => {
-        setCurrentItemID(item.id);
-      }}
-      data-active={currentItemID === item.id}
-      className={styles.item}
-    >
-      {item.name}
-    </li>
+    <Link to={`${item.id}`}>
+      <li className={styles.item}>{item.name}</li>
+    </Link>
   );
 };
 

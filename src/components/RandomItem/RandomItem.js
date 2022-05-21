@@ -1,21 +1,14 @@
 import React from "react";
 
-import Loader from "../Loader/Loader";
-import Error from "../Error/Error";
-import RandomItemContent from "../RandomItemContent/RandomItemContent";
+import Item from "../Item/Item";
 
 import styles from "./RandomItem.module.scss";
 
-const RandomItem = ({ data, error }) => {
+const RandomItem = ({ data, error, type }) => {
   return (
     <div className={styles.item}>
-      {error ? (
-        <Error />
-      ) : !data ? (
-        <Loader />
-      ) : (
-        <RandomItemContent data={data} />
-      )}
+      <Item data={data} error={error} type={type} />
+      <p className={styles.randomText}>Random {type}</p>
     </div>
   );
 };

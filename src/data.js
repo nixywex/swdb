@@ -56,7 +56,7 @@ const prepareData = async (data, type) => {
   }
 };
 
-const getPerson = async (id) => {
+export const getPerson = async (id) => {
   return await getResource(`people/${id}`).then((res) =>
     prepareData([res, id], "Person")
   );
@@ -72,7 +72,7 @@ const getAllPersons = async () => {
   return data;
 };
 
-const getPlanet = async (id) => {
+export const getPlanet = async (id) => {
   return await getResource(`planets/${id}`).then((res) =>
     prepareData([res, id], "Planet")
   );
@@ -88,7 +88,7 @@ const getAllPlanets = async () => {
   return data;
 };
 
-const getStarship = async (id) => {
+export const getStarship = async (id) => {
   return await getResource(`starships/${id}`).then((res) =>
     prepareData([res, id], "Starship")
   );

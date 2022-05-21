@@ -9,5 +9,17 @@
   .list {
     display: flex;
     justify-content: space-between;
+    .item {
+      list-style: none;
+      color: #ffffff;
+      cursor: pointer;
+      text-decoration: none;
+      transition: 0.2s ease-out;
+      padding: 10px;
+      &:hover {
+        color: rgb(216, 220, 0);
+        outline: 3px solid rgba(216, 220, 0);
+      }
+    }
   }
 }
