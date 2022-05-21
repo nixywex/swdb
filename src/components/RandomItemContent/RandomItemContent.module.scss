@@ -1,0 +1,46 @@
+img {
+  max-width: 300px;
+}
+.title {
+  margin-left: 20px;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  position: relative;
+  text-transform: uppercase;
+  .titleMain {
+    color: #d8dc00;
+    font-weight: 900;
+    font-size: 60px;
+    line-height: 70px;
+  }
+}
+.info {
+  margin-left: 20px;
+  .infoList {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .infoItem {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 30px;
+      line-height: 36px;
+      color: #696969;
+      margin-bottom: 5px;
+    }
+    .accent {
+      color: white;
+      font-weight: 700;
+    }
+  }
+}
+.randomText {
+  position: absolute;
+  font-size: 30px;
+  color: rgba(216, 220, 0, 0.1);
+  right: 5px;
+  bottom: 0;
+  font-weight: 900;
+  text-transform: uppercase;
+  user-select: none;
+}

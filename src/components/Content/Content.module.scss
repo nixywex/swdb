@@ -1,0 +1,25 @@
+.content {
+  padding: 40px 80px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  .titleBlock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+    .titleImg {
+      margin-right: 20px;
+    }
+    .title {
+      font-size: 50px;
+      font-weight: 700;
+    }
+  }
+  .mainContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+  }
+}

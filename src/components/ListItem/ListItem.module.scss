@@ -1,0 +1,18 @@
+.item {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 36px;
+  margin-bottom: 30px;
+  color: #ffffff;
+  display: inline-block;
+  cursor: pointer;
+  transition: 0.3s ease-out;
+  &:hover {
+    color: rgba(216, 220, 0, 0.7);
+  }
+  &[data-active="true"] {
+    color: #d8dc00;
+  }
+}

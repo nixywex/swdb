@@ -1,0 +1,13 @@
+.tabs {
+  text-decoration: none;
+  width: 400px;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 23px;
+  line-height: 36px;
+  .list {
+    display: flex;
+    justify-content: space-between;
+  }
+}

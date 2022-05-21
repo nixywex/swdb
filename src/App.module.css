@@ -1,0 +1,13 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-weight: 400;
+}
+li{
+    list-style: none;
+}
+.app{
+    background: #0E0E0E;
+    min-height: 100vh;
+}
