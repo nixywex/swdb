@@ -1,7 +1,7 @@
 # SWDB - Star Wars DataBase
 
 ## About project
-A simple project for working with external APIs. there is an opportunity to see information about characters, spaceships and planets from the Star Wars franchise. Implemented routing and different application pages.
+A simple project for working with external APIs. There is an opportunity to see information about characters, spaceships, and planets from the Star Wars franchise. I implemented routing and different application pages.
 
 ## Used technologies
 React.js, react-router, Fetch API.
